@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="imagemListDependencias"  >
+        <item >@drawable/img_banheiro</item>
+        <item >@drawable/img_cozinha </item>
+        <item >@drawable/img_sala_de_estar</item>
+        <item >@drawable/img_sala_de_jantar</item>
+        <item >@drawable/img_suite_master</item>
+        <item >@drawable/img_quarto</item>
+    </array>
+</resources>
