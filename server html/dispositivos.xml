@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Raiz>
+	<Dependencias>
+		<Posicao>1</Posicao>
+		<IdDependencia>90001</IdDependencia>
+		<Id>30000001</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central da suite master</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>2</Posicao>
+		<IdDependencia>90001</IdDependencia>
+		<Id>30000002</Id>
+		<Nome>Lampada dicroica 01</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 01 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>3</Posicao>
+		<IdDependencia>90001</IdDependencia>
+		<Id>30000003</Id>
+		<Nome>Lampada dicroica 02</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 02 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>4</Posicao>
+		<IdDependencia>90001</IdDependencia>
+		<Id>30000004</Id>
+		<Nome>Lampada dicroica 03</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 03 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>5</Posicao>
+		<IdDependencia>90001</IdDependencia>
+		<Id>30000005</Id>
+		<Nome>Cortineiro</Nome>
+		<Tipo>Cortina</Tipo>
+		<Status>0</Status>
+		<Descricao>Motor do cortineiro</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>6</Posicao>
+		<IdDependencia>90002</IdDependencia>
+		<Id>30000021</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central do quarto 01</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>7</Posicao>
+		<IdDependencia>90002</IdDependencia>
+		<Id>30000022</Id>
+		<Nome>Cortineiro</Nome>
+		<Tipo>Cortina</Tipo>
+		<Status>0</Status>
+		<Descricao>Motor do cortineiro</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>8</Posicao>
+		<IdDependencia>90003</IdDependencia>
+		<Id>30000031</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central do quarto 02</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>9</Posicao>
+		<IdDependencia>90003</IdDependencia>
+		<Id>30000032</Id>
+		<Nome>Cortineiro</Nome>
+		<Tipo>Cortina</Tipo>
+		<Status>0</Status>
+		<Descricao>Motor do cortineiro</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>10</Posicao>
+		<IdDependencia>90004</IdDependencia>
+		<Id>30000041</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central do banheiro social</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>11</Posicao>
+		<IdDependencia>90004</IdDependencia>
+		<Id>30000042</Id>
+		<Nome>Lampada dicroica 01</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 01 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>12</Posicao>
+		<IdDependencia>90004</IdDependencia>
+		<Id>30000043</Id>
+		<Nome>Lampada dicroica 02</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 02 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>13</Posicao>
+		<IdDependencia>90004</IdDependencia>
+		<Id>30000044</Id>
+		<Nome>Lampada dicroica 03</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 03 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>14</Posicao>
+		<IdDependencia>90004</IdDependencia>
+		<Id>30000045</Id>
+		<Nome>Lampada do espelho</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada do espelho do banheiro</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>15</Posicao>
+		<IdDependencia>90005</IdDependencia>
+		<Id>30000051</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central do banheiro da suite</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>16</Posicao>
+		<IdDependencia>90005</IdDependencia>
+		<Id>30000052</Id>
+		<Nome>Lampada dicroica 01</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 01 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>17</Posicao>
+		<IdDependencia>90005</IdDependencia>
+		<Id>30000053</Id>
+		<Nome>Lampada dicroica 02</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 02 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>18</Posicao>
+		<IdDependencia>90005</IdDependencia>
+		<Id>30000054</Id>
+		<Nome>Lampada dicroica 03</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 03 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>19</Posicao>
+		<IdDependencia>90005</IdDependencia>
+		<Id>30000055</Id>
+		<Nome>Lampada do espelho</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada do espelho do banheiro</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>20</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000061</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central da sala de estar</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>21</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000062</Id>
+		<Nome>Lampada dicroica 01</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 01 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>22</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000063</Id>
+		<Nome>Lampada dicroica 02</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 02 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>23</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000064</Id>
+		<Nome>Lampada dicroica 03</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 03 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>24</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000065</Id>
+		<Nome>Lampada dicroica 04</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 01 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>25</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000066</Id>
+		<Nome>Lampada dicroica 05</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 02 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>26</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000067</Id>
+		<Nome>Fita de Led da sanca</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Fita de LED da sanca central da sal</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>27</Posicao>
+		<IdDependencia>90006</IdDependencia>
+		<Id>30000068</Id>
+		<Nome>Cortineiro</Nome>
+		<Tipo>Cortina</Tipo>
+		<Status>0</Status>
+		<Descricao>Motor do cortineiro</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>28</Posicao>
+		<IdDependencia>90007</IdDependencia>
+		<Id>30000071</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central da sala de jantar</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>29</Posicao>
+		<IdDependencia>90007</IdDependencia>
+		<Id>30000072</Id>
+		<Nome>Lampada dicroica 01</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 01 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>30</Posicao>
+		<IdDependencia>90007</IdDependencia>
+		<Id>30000073</Id>
+		<Nome>Lampada dicroica 02</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 02 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>31</Posicao>
+		<IdDependencia>90007</IdDependencia>
+		<Id>30000074</Id>
+		<Nome>Lampada dicroica 03</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada dicroica LED 03 do gesso</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>32</Posicao>
+		<IdDependencia>90007</IdDependencia>
+		<Id>30000075</Id>
+		<Nome>Fita de Led da sanca</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Fita de LED da sanca central da sal</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>33</Posicao>
+		<IdDependencia>90007</IdDependencia>
+		<Id>30000076</Id>
+		<Nome>Cortineiro</Nome>
+		<Tipo>Cortina</Tipo>
+		<Status>0</Status>
+		<Descricao>Motor do cortineiro</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>34</Posicao>
+		<IdDependencia>90008</IdDependencia>
+		<Id>30000081</Id>
+		<Nome>Lampada central</Nome>
+		<Tipo>Lampada</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada central da cozinha</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>35</Posicao>
+		<IdDependencia>90008</IdDependencia>
+		<Id>30000082</Id>
+		<Nome>Lampada bancada 01</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada bancada 01</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>36</Posicao>
+		<IdDependencia>90008</IdDependencia>
+		<Id>30000083</Id>
+		<Nome>Lampada bancada 02</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada bancada 02</Descricao>
+	</Dependencias>
+	<Dependencias>
+		<Posicao>37</Posicao>
+		<IdDependencia>90008</IdDependencia>
+		<Id>30000084</Id>
+		<Nome>Lampada bancada 03</Nome>
+		<Tipo>LED</Tipo>
+		<Status>0</Status>
+		<Descricao>Lampada bancada 03</Descricao>
+	</Dependencias>
+</Raiz>

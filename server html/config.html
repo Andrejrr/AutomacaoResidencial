@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet.css" type='text/css'>
+    <script src="config.js"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1 style="text-align : center">Configurações</h1><br />
+        <div class="row">
+            <div class="col-3 col-s-3"></div>
+            <div id="config" class="col-6 col-s-9 confDiv">
+                <h3 style="margin : 0px">Modo de funcionamento</h3><br />
+                <div style="margin-left:5px; border:none">
+                    <input type="radio" name="modo" value="ModoAP" onclick="novoModo('ModoAP')" />Modo AP<br />
+                    <input type="radio" name="modo" value="ModoEstação" onclick="novoModo('ModoEstacao')" />Modo Estação<br />
+                    <input type="radio" name="modo" value="ModoAP-Estação" onclick="novoModo('ModoAP-Estacao')" />Modo AP-Estação<br />
+                    <span id ="ipEstacao" style="display: none">IP modo Estação: </span>
+                    <div id="statusModificaModo"></div>
+                </div>
+                <div id="redesDisponiveis" style="display:none"></div>
+            </div>
+        </div>
+
+
+        <!--Dialog modal-->
+        <!------------------------------------------------------>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content col-4 col-s-8">
+                <span class="close">&times;</span>
+                <h3>Conecte a central à rede selecionada</h3>
+                <br />
+                <div style="margin:10px;padding:10px">
+                    <img id="wifiSinal" class="wifiIcon" src="img_wifi_4_bar_lock.png"/>
+                    <span id="redeNome">Rede</span>
+                </div>
+                <div>
+                    <input id="senha" type="password" placeholder="Senha" />
+                    <input id="conectar" type="button" onclick="setSSIDConfig()" value="Conectar" />
+                </div>
+            </div>
+
+        </div>
+        <!------------------------------------------------------>
+
+
+    </div>
+</body>
+</html>
+

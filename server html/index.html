@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="public">
+    <title>Central de automação residencial</title>
+    <link rel="stylesheet" href="StyleSheet.css" type='text/css'>
+    <script src="core.js"></script>
+    <script src="config.js"></script>
+    <script src="dialog.js"></script>
+</head>
+<body>
+    <header id="titulo" class="row">
+        <img id="ic_smart_home" src="ic_smart_home.png" class="icSmartHome-t icSmartHome-d" />
+        <span>MINHA SMART HOME</span>
+        <img src="menu_white.png" onmouseover="this.src='menu_black.png'" onmouseout="this.src='menu_white.png'" onclick="mostraMenuLateral()" class="menuIcon-t menuIcon-d" />
+    </header>
+    <nav id="barraDeMenu" class="row  menuList-t menuList-d">
+        <span class="menuTitulo-t menuTitulo-d">Menu</span>
+        <ul class="menu-t menu-d">
+            <li class="menuItem"><a id="meusDispositivos" class="activeItem-d" onclick="meusDispositivosClick('meusDispositivos')">Meus dispositivos</a></li>
+            <li class="menuItem"><a id="configuracoes" onclick="configuracoesClick('configuracoes')">Configurações</a></li>
+            <li class="menuItem"><a id="manualDeUsuarios" onclick="manualDeUsuariosClick('manualDeUsuarios')">manual do usuário</a></li>
+            <li class="menuItem"><a id="contatos" onclick="contatosClick('contatos')">Contatos</a></li>
+        </ul>
+    </nav>
+  
+    <main id="corpo" class="container-fluid row">
+        
+    </main>
+
+</body>
+</html>

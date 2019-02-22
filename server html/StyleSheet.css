@@ -1,0 +1,532 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+h1 {
+    font-size: xx-large;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: black;
+}
+
+h3 {
+    font-size: large;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    background-color: white;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+
+[class*="menuList-"] {
+    display: none;
+}
+
+[class*="icSmartHome-"] {
+    height: 100%;
+}
+.menuIcon-t {
+    font-size: xx-large;
+    display: inline-block;
+    height: 48px;
+    width : 48px;
+    vertical-align: middle;
+    float: right;
+    cursor:pointer;
+}
+
+.menuList-t {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(150,180,255);
+    color: #005b4f;
+    height: 100%;
+    width: 70%;
+}
+
+    .menuList-t ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow-y: auto; /* enable scroll for menu items */
+        height: 95%;
+        cursor:pointer;
+    }
+
+        .menuList-t ul li{
+            color : white
+        }
+        .menuList-t ul li a {
+            padding: 15px;
+            display: block;
+        }
+            .menuList-t ul li :hover {
+                background-color: rgb(190,200,220);
+                color : blue;
+            }
+            .menuList-t ul li a :active {
+                background-color: rgb(220,200,190);
+                color: white;
+            }
+
+.activeItem-d {
+    color: black;
+    background-color: white;
+}
+
+.menuTitulo-t {
+    display: block;
+    padding: 20px;
+    background-color: #00897b;
+    color: white;
+    font-size:larger;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+    .disp-t {
+        margin-left: 10px;
+        padding: 15px;
+    }
+
+    icSmartHome-t {
+        width: 36px;
+        height: 36px;
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .disp-d {
+        margin-left: 20px;
+        padding: 15px;
+    }
+
+    .menuIcon-d {
+        display: none;
+    }
+
+    .menuTitulo-d {
+        display: none;
+    }
+
+    .menuList-d {
+        position: inherit;
+        display: block;
+        width:100%
+    }
+
+        .menuList-d ul {
+            background-color: #00897b;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            display: block;
+        }
+
+            .menuList-d ul li {
+                float: left;
+                cursor: pointer;
+                color: white;
+            }
+
+                .menuList-d ul li a {
+                    display: block;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    cursor: pointer
+                }
+
+                    .menuList-d ul li a .activeItem {
+                        color: #e35183;
+                    }
+
+                    .menuList-d ul li a:hover {
+                        background-color: #00bcae;
+                        color: white;
+                    }
+
+                    .menuList-d ul li a:active {
+                        background-color: #4ebaaa;
+                    }
+
+    .activeItem-d {
+        color: black;
+        background-color: white;
+    }
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+    color: #ffffff;
+}
+
+body {
+    height: auto;
+    width: auto;
+    position: center;
+    margin: 0px;
+}
+
+#titulo {
+    background-color: #005b4f;
+    font-size: larger;
+}
+
+    #titulo span {
+        vertical-align:middle;
+    }
+    #titulo img{
+        vertical-align:middle;
+    }
+#corpo {
+    color: black;
+}
+
+.dep {
+    list-style-type: none;
+    background-color: white;
+    margin: 0px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.depItem {
+    display: block;
+    height: 150px;
+    background-color: #005b4f;
+    padding: 10px;
+    margin: 15px 0px 15px 0px;
+    color:white;
+    cursor: pointer;
+    font-size:large;
+    
+}
+.depItemImg {
+    height: 128px;
+    vertical-align: middle;
+}
+.depItem a {
+    vertical-align: middle;
+    text-align:center;
+    margin-left:10px;
+}
+    .depItem:hover {
+    background-color: #00bcae;
+    color: white;
+}
+
+    .depItem:active {
+        background-color: #4ebaaa;
+    }
+
+[class*="disp"] {
+    list-style-type: none;
+    background-color: white;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.dispItem {
+    display: block;
+    background-color: #BBB;
+    margin: 10px 50px 10px 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    .dispItem img {
+        height: 48px;
+        vertical-align: middle;
+    }
+@media only screen and (max-width: 320px) {
+    .dispItem img {
+        height: 24px;
+        vertical-align: middle;
+    }
+    .dispItem {
+        display: block;
+        background-color: #BBB;
+        margin: 10px 10px 10px 10px;
+        padding: 2px;
+        cursor: pointer;
+    }
+}
+    .dispItem span {
+        vertical-align: middle;
+        padding-left:20px;
+    }
+    .dispItem:hover {
+        background-color: #888;
+        color: white;
+    }
+
+    .dispItem:active {
+        background-color: #668;
+        color: white;
+    }
+
+#config {
+    color: black;
+}
+
+#redesDisponiveis {
+    display:block;
+    margin: 0px;
+    padding: 0px;
+}
+
+    #redesDisponiveis ol {
+        list-style: none;
+        margin: 0px;
+        padding: 5px;
+    }
+
+        #redesDisponiveis ol li {
+            padding: 10px 0px 0px 0px;
+            border-bottom: 1px solid #999999;
+            cursor: pointer;
+            display: block;
+        }
+
+            #redesDisponiveis ol li:hover {
+                background-color: #FFFFFF;
+            }
+
+            #redesDisponiveis ol li:active {
+                background-color: #EEEEEE;
+            }
+
+.confDiv {
+    margin: 0px;
+    padding: 0px;
+    background-color: #DDDDDD;
+}
+
+.wifiIcon {
+    width: 24px;
+    height: 24px;
+    margin: 10px 15px 0px 5px;
+}
+
+#statusConexao {
+    font-size: small;
+    font-weight: bold;
+}
+
+/*Dispositivos dialog*/
+
+.dispModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding:30px 20px 0px 20px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+[class*="dispModal-content"]{
+    background-color: #fefefe;
+    border: 1px solid #888;
+    float: none;
+    position: center;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .dispModal-content {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+    /* The Close Button */
+    .dispClose {
+        display:block;
+        color: #aaaaaa;
+        float: right;
+        padding:5px;
+        margin-bottom:10px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+@media only screen and (max-width: 450px) {
+    .dispClose {
+        color: red
+    }
+
+    .dispModal {
+        padding: 30px 5px 0px 5px;
+    }
+
+}
+.dispClose:hover,
+        .dispClose:focus {
+            color: #A00;
+            font-size: 32px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+    /*Dialog modal style*/
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        float: none;
+        position: center;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
