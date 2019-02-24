@@ -1,0 +1,15 @@
+    <div onload="a()">
+        <h1>Configurações</h1><br />
+        <div class="row">
+            <div class="col-3"></div>
+            <div id="config" class="col-9">
+                <h3>Modo de funcionamento</h3><br />
+                <div style="margin-left:20px">
+                    <input type="radio" name="modo" value="ModoAP" checked="checked" onclick="novoModo('ModoAP')" />Modo AP<br />
+                    <input type="radio" name="modo" value="ModoEstação" onclick="novoModo('ModoEstacao')" />Modo Estação<br />
+                    <input type="radio" name="modo" value="ModoAP-Estação" onclick="novoModo('ModoAP-Estacao')" />Modo AP-Estação<br />
+                </div>
+                <div id="redesDisponiveis" style="display:none"><h3>Redes disponiveis</h3><br /></div>
+            </div>
+        </div>
+    </div>

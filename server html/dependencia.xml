@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Raiz>
+	<Dependencias>
+		<Id>90001</Id>
+		<Nome>Suite Master</Nome>
+		<Tipo>Suite</Tipo>
+		<NumeroDispositivos>5</NumeroDispositivos>
+	</Dependencias>
+	<Dependencias>
+		<Id>90002</Id>
+		<Nome>Quarto 01</Nome>
+		<Tipo>Quarto</Tipo>
+		<NumeroDispositivos>2</NumeroDispositivos>
+	</Dependencias>
+	<Dependencias>
+		<Id>90003</Id>
+		<Nome>Quarto 02</Nome>
+		<Tipo>Quarto</Tipo>
+		<NumeroDispositivos>2</NumeroDispositivos>
+	</Dependencias>
+	<Dependencias>
+		<Id>90004</Id>
+		<Nome>Banheiro Social</Nome>
+		<Tipo>Banheiro</Tipo>
+		<NumeroDispositivos>5</NumeroDispositivos>
+	</Dependencias>
+	<Dependencias>
+		<Id>90005</Id>
+		<Nome>Banheiro Suite</Nome>
+		<Tipo>Banheiro</Tipo>
+		<NumeroDispositivos>5</NumeroDispositivos>
+	</Dependencias>
+	<Dependencias>
+		<Id>90006</Id>
+		<Nome>Sala de estar</Nome>
+		<Tipo>Sala de estar</Tipo>
+		<NumeroDispositivos>8</NumeroDispositivos>
+	</Dependencias>
+	<Dependencias>
+		<Id>90007</Id>
+		<Nome>Sala de Jantar</Nome>
+		<Tipo>Sala de Jantar</Tipo>
+		<NumeroDispositivos>6</NumeroDispositivos>
+	</Dependencias>
+	<Dependencias>
+		<Id>90008</Id>
+		<Nome>Cozinha</Nome>
+		<Tipo>Cozinha</Tipo>
+		<NumeroDispositivos>4</NumeroDispositivos>
+	</Dependencias>
+</Raiz>
