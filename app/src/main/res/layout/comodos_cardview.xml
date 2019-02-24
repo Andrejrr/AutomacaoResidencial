@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     app:layout_gravity="center_vertical|center_horizontal|center">
 
     <LinearLayout
@@ -15,8 +16,7 @@
         <android.support.v7.widget.CardView
             android:id="@+id/cvDependencia"
             android:layout_width="150dp"
-            android:layout_height="250dp"
-            android:layout_margin="10dp">
+            android:layout_height="200dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -25,11 +25,12 @@
 
                 <ImageView
                     android:id="@+id/imvDependencia"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_gravity="center_horizontal"
                     android:adjustViewBounds="true"
                     android:cropToPadding="true"
-                    android:scaleType="fitCenter"
+                    android:scaleType="fitXY"
                     app:srcCompat="@color/colorAccent" />
 
                 <TextView

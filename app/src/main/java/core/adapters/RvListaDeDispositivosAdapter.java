@@ -1,6 +1,7 @@
 package core.adapters;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
@@ -14,10 +15,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.lspsoftware.automacaoresidencial.R;
 
 import java.util.List;
 
+import core.auxiliares.DialogConstrutor;
 import core.nucleo.Dispositivo;
 
 public class RvListaDeDispositivosAdapter extends RecyclerView.Adapter {
@@ -42,12 +50,34 @@ public class RvListaDeDispositivosAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         try {
             RvListaDeDispositivosHolder dispositivosHolder = (RvListaDeDispositivosHolder) holder;
-            Dispositivo dispositivo = dispositivos.get(position);
+            final Dispositivo dispositivo = dispositivos.get(position);
             dispositivosHolder.tvStatusDispositivo.setText(dispositivo.getStatus());
             dispositivosHolder.tvNomeDispositivo.setText(dispositivo.getNome());
             dispositivosHolder.tvDescricaoDispositivo.setText(dispositivo.getDescricao());
             Resources resources = context.getResources();
             dispositivosHolder.imvDispositivo.setImageDrawable(getImagem(dispositivo.getTipo(),dispositivo.getStatus(),resources));
+            dispositivosHolder.cvDispositivos.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    SharedPreferences preferences = context.getSharedPreferences("Preferencias", Context.MODE_PRIVATE);
+                    String host = preferences.getString("ip",null);
+                    RequestQueue queue = Volley.newRequestQueue(context);
+                    String url = "http://" + host + "/setStatusSaida="+dispositivo.getPosicao();
+                    StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            new DialogConstrutor(context,"Erro ao acionar servidor",error.getMessage(),"OK");
+                        }
+                    });
+                    queue.add(request);
+                }
+            });
+
         }catch(Exception e){
             Log.e("erro:",e.getMessage());
 

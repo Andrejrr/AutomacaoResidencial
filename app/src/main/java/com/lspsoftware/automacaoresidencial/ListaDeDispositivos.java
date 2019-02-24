@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -53,6 +54,15 @@ public class ListaDeDispositivos extends Fragment {
     private List<Dispositivo> dispositivos;
     private File file;
     File xml;
+    RecyclerView rvListaDeDispositivos;
+    Handler statusHandler;
+    Runnable getStatusRun;
+    RvListaDeDispositivosAdapter adapter;
+    long intervalo = 1000;
+    SharedPreferences preferences;
+    String host;
+    RequestQueue queue;
+    StringRequest request;
 
     public ListaDeDispositivos() {
         // Required empty public constructor
@@ -77,17 +87,17 @@ public class ListaDeDispositivos extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View listaDeDispositivos = inflater.inflate(R.layout.fragment_lista_de_dispositivos, container, false);
-        final RecyclerView rvListaDeDispositivos = listaDeDispositivos.findViewById(R.id.rvListaDeDispositivos);
+        rvListaDeDispositivos = listaDeDispositivos.findViewById(R.id.rvListaDeDispositivos);
         String storagePath = getContext().getExternalFilesDir(null).getPath();//+ "/configFiles/"+ configCode;
         file = new File(storagePath);
         if (!file.exists()) {
             file.mkdirs();
         }
-        SharedPreferences preferences = getContext().getSharedPreferences("Preferencias", Context.MODE_PRIVATE);
-        String host = preferences.getString("ip",null);
-        final RequestQueue queue = Volley.newRequestQueue(getContext());
+        preferences = getContext().getSharedPreferences("Preferencias", Context.MODE_PRIVATE);
+        host = preferences.getString("ip",null);
+        queue = Volley.newRequestQueue(getContext());
         String url = "http://" + host + "/"+"dispositivos.xml";
-        final StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+        request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -100,10 +110,12 @@ public class ListaDeDispositivos extends Fragment {
                     Log.e("", e.getMessage());
                 }
                 carregaLista(xml);
-                RvListaDeDispositivosAdapter adapter = new RvListaDeDispositivosAdapter(getContext(), dispositivos);
+                adapter = new RvListaDeDispositivosAdapter(getContext(), dispositivos);
                 rvListaDeDispositivos.setAdapter(adapter);
                 LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false);
+                layoutManager.generateLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT));
                 rvListaDeDispositivos.setLayoutManager(layoutManager);
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -112,7 +124,68 @@ public class ListaDeDispositivos extends Fragment {
             }
         });
         queue.add(request);
+        statusHandler = new Handler();
+        getStatusRun = new Runnable() {
+            @Override
+            public void run() {
+                atualizaStatus();
+            }
+        };
+        statusHandler.postDelayed(getStatusRun,2000);
         return listaDeDispositivos;
+    }
+
+    private void atualizaStatus() {
+        try {
+            queue = Volley.newRequestQueue(getContext());
+            String url = "http://" + host + "/getStatusSaidas";
+            request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    int i = 0;
+                    while (i < response.length()) {
+                        String s = "";
+                        s += response.charAt(i);
+                        for (Dispositivo d : dispositivos
+                                ) {
+                            if (d.getPosicao() == i)
+                                d.setStatus(Integer.parseInt(s));
+                        }
+                        i++;
+                    }
+                    /*adapter = new RvListaDeDispositivosAdapter(getContext(), dispositivos);
+                    rvListaDeDispositivos.setAdapter(adapter);*/
+                    adapter.notifyDataSetChanged();
+                    statusHandler.postDelayed(getStatusRun, 2000);
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    statusHandler.postDelayed(getStatusRun, 2000);
+                }
+            });
+            queue.add(request);
+        }catch (Exception e){
+            Log.e(e.getLocalizedMessage(),e.getMessage());
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        statusHandler.removeCallbacks(getStatusRun);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        statusHandler.removeCallbacks(getStatusRun);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        statusHandler.removeCallbacks(getStatusRun);
     }
 
     private boolean carregaLista(File xml) {
@@ -135,13 +208,16 @@ public class ListaDeDispositivos extends Fragment {
                             String tag = filhos.item(j).getNodeName();
                             if (tag.contains("Id")) {
                                 dispositivo.setId(Integer.parseInt(filhos.item(j).getTextContent()));
-                            } else if (tag.contains("Nome")) {
+                            }else if (tag.contains("Nome")) {
                                 dispositivo.setNome(filhos.item(j).getTextContent());
-                            } else if (tag.contains("Tipo")) {
+                            }else if (tag.contains("Tipo")) {
                                 dispositivo.setTipo(filhos.item(j).getTextContent());
-                            } else if (tag.contains("descricao")) {
+                            }else if (tag.contains("Descricao")) {
                                 dispositivo.setDescricao(filhos.item(j).getTextContent());
-                            } else if (tag.contains("status")) {
+                            }else if (tag.contains("Posicao")) {
+                                dispositivo.setPosicao(Integer.parseInt(filhos.item(j).getTextContent())
+                                );
+                            }else if (tag.contains("Status")) {
                                 switch (Integer.parseInt(filhos.item(j).getTextContent())) {
                                     case 0:
                                         dispositivo.setStatus(Dispositivo.DESLIGADO);
@@ -165,5 +241,7 @@ public class ListaDeDispositivos extends Fragment {
         }
         return carregou;
     }
+
+
 
 }

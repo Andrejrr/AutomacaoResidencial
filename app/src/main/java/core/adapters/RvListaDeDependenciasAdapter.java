@@ -48,7 +48,7 @@ public class RvListaDeDependenciasAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         final RvListaDeDependenciasHolder dependenciasHolder = (RvListaDeDependenciasHolder) holder;
         final Dependencia dependencia = dependencias.get(position);
-        dependenciasHolder.tvNumeroDispositivo.setText(Integer.toString(dependencia.getNumeroDispositivos()));
+        dependenciasHolder.tvNumeroDispositivo.setText("Numero de dispositivos: "+Integer.toString(dependencia.getNumeroDispositivos()));
         dependenciasHolder.tvNomeDependencia.setText(dependencia.getNome());
         dependenciasHolder.cvDependencia.setOnClickListener(new View.OnClickListener() {
             @Override
